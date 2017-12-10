@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>NVD3 chart</title>
+
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/d3.min.js"></script>
+    <script src="lib/nv.d3.min.js"></script>
+    <script src="lib/angular-nvd3.min.js"></script>
+    <link rel="stylesheet" href="css/nv.d3.css">
+    <script src="chart.controller.js"></script>
+
+</head>
+<body>
+    
+    <div ng-app="ChartApp" ng-controller="ChartController">
+        <nvd3 id="chartBar" options="options" data="data"></nvd3>
+        <button ng-click="updateContent()">Update values</button>
+        <button ng-click="updateValue()">{{Value}}</button>
+   </div>
+
+  </body>
+</html>
